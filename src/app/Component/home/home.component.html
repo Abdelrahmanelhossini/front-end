@@ -1,0 +1,169 @@
+
+<!-- <div class="container-fluid">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">StudentName</th>
+          <th scope="col">level</th>
+          <th scope="col">Email</th>
+          <th scope="col">Totalfees</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of students">
+          <td scope="row">{{item.studentId}}</td>
+           
+  
+          <td>{{item.name}}</td>
+          <td>{{item.levelid}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.totalFees}}</td>  -->
+           <!-- <td><button type="button" class="btn btn-outline-danger">Danger</button></td>  -->
+        <!-- </tr>
+        
+        
+      </tbody>
+    </table>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">courseName</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of courses">
+        <td scope="row">{{items.courseId}}</td>
+         
+
+        <td>{{items.courseName}}</td>  -->
+       
+         <!-- <td><button type="button" class="btn btn-outline-danger">Danger</button></td>  -->
+       <!-- </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">courseid</th>
+        <th scope="col">studentid</th>
+        <th scope="col">degree</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of enrolls">
+        <td scope="row">{{items.enrollId}}</td>
+         
+
+        <td>{{items.courseId}}</td> 
+        <td>{{items.studentId}}</td> 
+        <td>{{items.degree}}</td>  -->
+       
+         <!-- <td><button type="button" class="btn btn-outline-danger">Danger</button></td>  -->
+       <!-- </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">levelname</th>
+        <th scope="col">valuepaid</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of level">
+        <td scope="row">{{items.levelId}}</td>
+         
+
+        <td>{{items.levelName}}</td> 
+        <td>{{items.valuepaid}}</td> 
+          -->
+       
+         <!-- <td><button type="button" class="btn btn-outline-danger">Danger</button></td>  -->
+       <!-- </tr>
+      
+      
+    </tbody>
+  </table>
+</div> -->
+<!-- <div *ngFor="let student of students">
+  {{ student.Name }} - {{student.Email}}
+</div> -->
+
+<div class="combobox-container">
+  <input type="text" id="searchInput" class="combobox-input" placeholder="Search..." oninput="filterOptions()">
+  <div id="dropdown" class="combobox-dropdown">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+      <option value="Option 4">Option 4</option>
+      <option value="Option 5">Option 5</option>
+  </div>
+
+<div class="form-group col-md-3">
+  <label for="inputState">level</label>
+  <select required id="inputState" class="form-control">
+    <option selected>one</option>
+    <option>two</option>
+    <option>three</option>
+  </select>
+</div>
+<div class="form-group col-md-3">
+  <label for="inputZip">Rank</label>
+  <input type="text" class="form-control" id="inputTotalFees">
+</div>
+
+<div class="form-group col-md-3">
+  <label for="input">mindegree</label>
+  <input type="text" class="form-control" id="inputTotalFees">
+</div>
+
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">studentName</th>
+        <th scope="col">totalDegrees</th>
+        <th scope="col" *ngFor="let items of search[0].courseGrades" >{{items.courseName}} </th>
+        <th scope="col">Rank</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let items of search">
+        <td scope="row">{{items.studentName}}</td>
+        <td>{{items.totalDegrees}}</td>
+         <td scope ="row" *ngFor="let items of search[1].courseGrades">{{items.degree}}</td>
+
+       
+        <td>{{items.rank}}</td> 
+          
+       
+          <td><button type="button" class="btn btn-outline-danger">Update</button></td>  
+          <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+        </tr>
+      
+      
+    </tbody>
+  </table>
+</div> 

@@ -95,12 +95,19 @@
               "src/assets"
             ],
             "styles": [
+              "/studentSphere/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "/studentSphere/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0fc75c24-9029-4bd0-95b0-d0516c3943ad"
   }
 }
