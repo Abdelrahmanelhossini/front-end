@@ -1,0 +1,107 @@
+/* تنسيق حقول الإدخال */
+input[type="text"] {
+    padding: 10px; /* زيادة البُعد الداخلي */
+    margin: 12px 0; /* زيادة الهامش العلوي والسفلي */
+    width: 100%; /* جعل الحقل يأخذ كامل العرض المتاح */
+    max-width: 300px; /* تعيين أقصى عرض للحقل */
+    border: 1px solid #888; /* تعديل لون الحدود ليصبح أكثر هدوءاً */
+    border-radius: 6px; /* تكبير الزوايا المستديرة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تحسين التفاعل عند التركيز */
+}
+
+/* تغيير لون الحدود عند التركيز */
+input[type="text"]:focus {
+    border-color: #4CAF50; /* اللون الأخضر عند التركيز */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* تكبير الظل عند التركيز */
+}
+
+/* تنسيق القائمة المنسدلة */
+select {
+    padding: 10px; /* زيادة البُعد الداخلي */
+    margin: 12px 0; /* زيادة الهامش العلوي والسفلي */
+    width: 100%; /* جعل الحقل يأخذ كامل العرض المتاح */
+    max-width: 320px; /* تعيين أقصى عرض للقائمة */
+    border: 1px solid #888; /* تعديل لون الحدود */
+    border-radius: 6px; /* تكبير الزوايا المستديرة */
+    background-color: #f9f9f9; /* لون خلفية خفيف */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* تحسين التفاعل عند التركيز */
+}
+select option {
+    padding: 10px; /* المسافة الداخلية للعناصر */
+}
+
+/* جعل القائمة قابلة للتمرير عند زيادة العناصر */
+
+
+/* تغيير لون الحدود عند التركيز على القائمة */
+select:focus {
+    border-color: #4CAF50; /* اللون الأخضر عند التركيز */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* تكبير الظل عند التركيز */
+}
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* أزرار التحديث والحذف */
+button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #f44336;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.update {
+    background-color: #4CAF50;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* إخفاء القائمة المنسدلة مبدئياً */
+select[style*="display: none;"] {
+    display: none;
+}
+
+/* تحسين مظهر الجدول */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

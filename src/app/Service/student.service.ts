@@ -12,5 +12,11 @@ export class StudentService {
   getAllStudents(): Observable<Student[]>{
     return this.http.get<Student[]>(this.apiUrl);
   }
+  deletestudent(StudentId:number):Observable<void>{
+    return this.http.delete<void>(`https://localhost:7206/api/Students/${StudentId}`);
+  }
 
+  addStudent(student: Student): Observable<Student> {
+    return this.http.post<Student>(this.apiUrl, student); // يجب أن يتطابق هذا مع نقطة النهاية الخاصة بإضافة الطالب
+  }
 }

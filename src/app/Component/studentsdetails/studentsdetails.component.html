@@ -26,39 +26,29 @@
     <input type="text" class="form-control" id="inputTotalFees">
   </div>
    -->
-   <div class="combobox-container">
-    <input type="text" id="searchInput" class="combobox-input" placeholder="Search..." oninput="filterOptions()">
-    <div id="dropdown" class="combobox-dropdown">
-        <option value="Option 1">Option 1</option>
-        <option value="Option 2">Option 2</option>
-        <option value="Option 3">Option 3</option>
-        <option value="Option 4">Option 4</option>
-        <option value="Option 5">Option 5</option>
-    </div>
-  
-  <div class="form-group col-md-3">
-    <label for="inputState">level</label>
-    <select required id="inputState" class="form-control">
-      <option selected>one</option>
-      <option>two</option>
-      <option>three</option>
-    </select>
-  </div>
-  <div class="form-group col-md-3">
-    <label for="inputZip">Rank</label>
-    <input type="text" class="form-control" id="inputTotalFees">
-  </div>
-  
-  <div class="form-group col-md-3">
-    <label for="input">mindegree</label>
-    <input type="text" class="form-control" id="inputTotalFees">
-  </div>
-  
+   <input type="text" id="searchInput" placeholder="Search by name" oninput="filterByName()">
+
+   <!-- قائمة البحث المنسدلة -->
+
+   <input type="text" id="level" placeholder="Level" oninput="filterData()">
+<input type="text" id="rank" placeholder="Rank" oninput="filterData()">
+<input type="text" id="minDegree" placeholder="Min Degree" oninput="filterData()">
+
+<select id="dropdown" size="5" style="display: none;">
+  <option value="Option 1">Option 1</option>
+  <option value="Option 2">Option 2</option>
+  <option value="Option 3">Option 3</option>
+  <option value="Option 4">Option 4</option>
+  <option value="Option 5">Option 5</option>
+</select>
+
+
   <div class="container-fluid">
     <table class="table">
       <thead>
         <tr>
           <th scope="col">studentName</th>
+          <th scope="col" *ngFor="let item of search[0].courseGrades">{{item.courseName}}</th>
           <th scope="col">totalDegrees</th>
           <th scope="col">Rank</th>
           <th scope="col">Update</th>
@@ -70,16 +60,21 @@
       <tbody>
         <tr *ngFor="let items of search">
           <td scope="row">{{items.studentName}}</td>
+          <td *ngFor="let course of items.courseGrades">
+            <!-- تحقق مما إذا كانت المادة موجودة عند الطالب، إذا لا تُظهر 'null' -->
+            <!-- <span>{{ getCourseGrade(course.courseName, items.courseGrades) }}</span> -->
+             
+            {{course.degree}}
+
+            <!-- <span *ngIf="items..find(cg => cg.courseName === course.courseName); else noGrade"></span>  -->
+          </td>
           <td>{{items.totalDegrees}}</td>
-           
-  
-         
           <td>{{items.rank}}</td> 
             
          
             <td><button type="button" class="btn btn-outline-danger">Update</button></td>  
-            <td><button type="button"class="btn btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
-              <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/>
+            <td><button (click)="deleteStudent(items.studentName)" type="button"class="btn btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+            <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z"/>
             </svg>Delete</button></td>
           </tr>
         

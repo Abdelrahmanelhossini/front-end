@@ -5,13 +5,15 @@ import {  NgModule } from '@angular/core';
 import { AddStudentComponent } from './Component/add-student/add-student.component';
 import { AddEnrollmentComponent } from './Component/add-enrollment/add-enrollment.component';
 import { StudentsdetailsComponent } from './Component/studentsdetails/studentsdetails.component';
+import { LoginComponent } from './Component/login/login.component';
 
 
 export const routes: Routes = [
     {path :"HOME",component : StudentsdetailsComponent},
     {path :"addstudent",component:AddStudentComponent},
     {path :"addenrollment", component:AddEnrollmentComponent },
-    {path :"students",component:HomeComponent}
+    {path :"students",component:HomeComponent},
+    {path: "login",component:LoginComponent}
      
 ];
 @NgModule({
